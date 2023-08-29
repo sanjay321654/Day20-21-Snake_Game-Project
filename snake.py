@@ -14,6 +14,7 @@ class Snake:
     def __init__(self):
         self.all_segments = []
         self.move_snake()
+        self.head = self.all_segments[0]
 
     def move_snake(self):
         for position in COORDINATES:
@@ -30,17 +31,23 @@ class Snake:
             new_y = self.all_segments[seg - 1].ycor()
             self.all_segments[seg].goto(new_x, new_y)
 
-        self.all_segments[0].forward(MOVE_FORWARD)
+        self.head.forward(MOVE_FORWARD)
 
     def Up(self):
-
-        self.all_segments[0].setheading(UP)
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
     def down(self):
-        self.all_segments[0].setheading(DOWN)
+        if self.head.heading() != UP:
+
+            self.head.setheading(DOWN)
 
     def left(self):
-        self.all_segments[0].setheading(LEFT)
+        if self.head.heading() != RIGHT:
+
+            self.head.setheading(LEFT)
 
     def right(self):
-        self.all_segments[0].setheading(RIGHT)
+        if self.head.heading() != LEFT:
+
+            self.head.setheading(RIGHT)
