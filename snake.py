@@ -18,11 +18,18 @@ class Snake:
 
     def move_snake(self):
         for position in COORDINATES:
-            tom = Turtle("square")
-            tom.color("white")
-            tom.penup()
-            tom.goto(position)
-            self.all_segments.append(tom)
+            self.add_segments(position)
+
+    def add_segments(self, position):
+        tom = Turtle("square")
+        tom.color("white")
+        tom.penup()
+        tom.goto(position)
+        self.all_segments.append(tom)
+
+    def extend(self):
+        self.add_segments(self.all_segments[-1].position())
+
 
     def move(self):
 
