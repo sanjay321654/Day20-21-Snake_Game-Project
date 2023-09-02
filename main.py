@@ -6,8 +6,7 @@ from scoreboard import Score
 tom = Turtle()
 screen = Screen()
 screen.setup(width=600, height=600)
-bg_image_path = "snakebg.gif"
-tom.bgpic(bg_image_path)
+screen.bgpic("snake4.gif")
 screen.title("Snake Game")
 
 screen.tracer(0)

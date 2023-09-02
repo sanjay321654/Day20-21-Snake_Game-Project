@@ -5,9 +5,9 @@ import random
 class Food(Turtle):
     def __init__(self):
         super().__init__()
-        self.shape("circle")
-        self.shapesize(stretch_len=0.7, stretch_wid=0.7)
-        self.color("Green")
+        self.shape("turtle")
+        self.shapesize(stretch_len=0.8, stretch_wid=0.8)
+        self.color("red")
         self.penup()
         self.speed("fastest")
         self.refresh()

@@ -1,5 +1,6 @@
+import turtle
 from turtle import Turtle
-
+turtle.colormode(255)
 COORDINATES = [(0, 0), (-20, 0), (-40, 0)]
 
 MOVE_FORWARD = 20
@@ -7,7 +8,7 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
-
+RGB = (165, 42, 42)
 
 class Snake:
 
@@ -23,7 +24,7 @@ class Snake:
     def add_segments(self, position):
         tom = Turtle("circle")
         tom.shapesize(1.5)
-        tom.color("brown")
+        tom.color(RGB)
         tom.penup()
         tom.goto(position)
         self.all_segments.append(tom)
