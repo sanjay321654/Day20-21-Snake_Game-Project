@@ -1,12 +1,13 @@
-from turtle import Screen
+from turtle import Screen, Turtle
 import time
 from snake import Snake
 from food import Food
 from scoreboard import Score
-
+tom = Turtle()
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.bgcolor("black")
+bg_image_path = "snakebg.gif"
+tom.bgpic(bg_image_path)
 screen.title("Snake Game")
 
 screen.tracer(0)
@@ -33,8 +34,8 @@ while game_on:
         score.score_card()
 
     # Detect the collision on the wall.
-    if (snake.head.xcor() > 287 or snake.head.xcor() < -287 or snake.head.ycor() > 287 or
-            snake.head.ycor() < -287):
+    if (snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or
+            snake.head.ycor() < -290):
         game_on = False
         score.game_over_words()
 
