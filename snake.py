@@ -23,7 +23,7 @@ class Snake:
 
     def add_segments(self, position):
         tom = Turtle("circle")
-        tom.shapesize(1.5)
+        tom.shapesize(1.7)
         tom.color(RGB)
         tom.penup()
         tom.goto(position)

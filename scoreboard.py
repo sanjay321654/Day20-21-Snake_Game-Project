@@ -17,7 +17,7 @@ class Score(Turtle):
 
     def game_over_words(self):
         self.goto(x=0, y=0)
-        self.write("Game Over! Better luck next Time  ", align=ALIGNMENT, font=FONT)
+        self.write("Game Over! Better luck next Time 🙃", align=ALIGNMENT, font=FONT)
 
     def score_card(self):
         self.score += 1
